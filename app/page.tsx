@@ -6,8 +6,9 @@ import Image from "next/image"
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="border-b bg-white">
-        <div className="container flex h-16 items-center justify-between">
+      <header className="sticky top-0 z-10 border-b bg-white">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -62,14 +63,15 @@ export default function Home() {
               </svg>
               <span className="sr-only">Menu</span>
             </Button>
+            </div>
           </div>
         </div>
       </header>
       <main className="flex-1">
         <section className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 py-12 md:py-20">
           <div className="absolute inset-0 bg-grid-gray-200/50 bg-[size:24px_24px] opacity-25"></div>
-          <div className="container relative px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+            <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="inline-flex items-center rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-sm text-teal-600">
                   <span className="mr-2 h-2 w-2 rounded-full bg-teal-500"></span>
@@ -84,7 +86,7 @@ export default function Home() {
                     learning journey tailored to your schedule and goals.
                   </p>
                 </div>
-                <div className="flex flex-col gap-2 sm:flex-row">
+                <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link
                     href="/create-roadmap"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-teal-500 px-6 text-sm font-medium text-white shadow transition-colors hover:bg-teal-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-teal-500"
@@ -134,7 +136,7 @@ export default function Home() {
                     <div className="flex-1 space-y-6">
                       <div className="space-y-2">
                         <div className="flex items-center gap-2">
-                          <div className="h-10 w-10 rounded-full bg-teal-100 flex items-center justify-center">
+                          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-100">
                             <span className="text-xs font-medium text-teal-700">1</span>
                           </div>
                           <div className="flex-1">
@@ -148,7 +150,7 @@ export default function Home() {
                       </div>
                       <div className="space-y-2">
                         <div className="flex items-center gap-2">
-                          <div className="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center">
+                          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
                             <span className="text-xs font-medium text-purple-700">2</span>
                           </div>
                           <div className="flex-1">
@@ -162,7 +164,7 @@ export default function Home() {
                       </div>
                       <div className="space-y-2">
                         <div className="flex items-center gap-2">
-                          <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
+                          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100">
                             <span className="text-xs font-medium text-blue-700">3</span>
                           </div>
                           <div className="flex-1">
@@ -176,7 +178,7 @@ export default function Home() {
                       </div>
                       <div className="space-y-2 hidden sm:block">
                         <div className="flex items-center gap-2">
-                          <div className="h-10 w-10 rounded-full bg-amber-100 flex items-center justify-center">
+                          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-100">
                             <span className="text-xs font-medium text-amber-700">4</span>
                           </div>
                           <div className="flex-1">
@@ -207,8 +209,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-white py-20">
-          <div className="container px-4 md:px-6">
+        <section className="bg-white py-16 md:py-20">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <div className="inline-flex items-center rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-sm text-teal-600">
                 <span className="mr-2 h-2 w-2 rounded-full bg-teal-500"></span>
@@ -304,7 +306,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-16 rounded-lg bg-gradient-to-r from-teal-50 to-teal-100 p-8">
+            <div className="mx-auto mt-16 max-w-5xl rounded-lg bg-gradient-to-r from-teal-50 to-teal-100 p-8">
               <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">Ready to accelerate your learning?</h3>
@@ -324,8 +326,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="how-it-works" className="py-20">
-          <div className="container px-4 md:px-6">
+        <section id="how-it-works" className="bg-gray-50 py-16 md:py-20">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="inline-flex items-center rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-sm text-teal-600">
                 <span className="mr-2 h-2 w-2 rounded-full bg-teal-500"></span>
@@ -338,7 +340,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto mt-16 grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+            <div className="mx-auto mt-16 grid max-w-6xl items-start gap-8 py-12 lg:grid-cols-3 lg:gap-12">
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="relative">
                   <div className="flex h-20 w-20 items-center justify-center rounded-full bg-teal-100">
@@ -443,7 +445,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center">
+            <div className="mt-8 flex justify-center">
               <Link
                 href="/create-roadmap"
                 className="inline-flex h-10 items-center justify-center rounded-md bg-teal-500 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-teal-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-teal-500"
@@ -455,8 +457,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="testimonials" className="bg-gray-50 py-12 md:py-20">
-          <div className="container px-4 md:px-6">
+        <section id="testimonials" className="bg-white py-16 md:py-20">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="inline-flex items-center rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-sm text-teal-600">
                 <span className="mr-2 h-2 w-2 rounded-full bg-teal-500"></span>
@@ -471,18 +473,18 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto mt-12 md:mt-16 grid max-w-6xl gap-6 lg:grid-cols-3">
+            <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:mt-16 lg:grid-cols-3">
               <div className="rounded-lg border bg-white p-6 shadow-sm">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                   <Image
                     src="/placeholder.svg?height=60&width=60"
                     alt="User"
-                    className="rounded-full mx-auto sm:mx-0"
+                    className="mx-auto h-[60px] w-[60px] rounded-full sm:mx-0"
                     width={60}
                     height={60}
                   />
-                  <div>
-                    <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                  <div className="flex-1">
+                    <div className="mb-1 flex items-center justify-center gap-2 sm:justify-start">
                       <h3 className="font-semibold">Sarah Johnson</h3>
                       <div className="flex">
                         {Array.from({ length: 5 }).map((_, i) => (
@@ -501,12 +503,12 @@ export default function Home() {
                         ))}
                       </div>
                     </div>
-                    <p className="text-sm text-gray-500 text-center sm:text-left">Web Developer</p>
+                    <p className="text-center text-sm text-gray-500 sm:text-left">Web Developer</p>
                     <p className="mt-4 text-gray-600">
                       "I went from knowing nothing about web development to landing my first job in just 6 months! The
                       daily breakdown made it easy to stay consistent even with my busy schedule."
                     </p>
-                    <div className="mt-4 flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                    <div className="mt-4 flex flex-wrap items-center justify-center gap-2 sm:justify-start">
                       <span className="rounded-full bg-teal-100 px-2 py-1 text-xs font-medium text-teal-800">
                         Web Development
                       </span>
@@ -518,16 +520,16 @@ export default function Home() {
                 </div>
               </div>
               <div className="rounded-lg border bg-white p-6 shadow-sm">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                   <Image
                     src="/placeholder.svg?height=60&width=60"
                     alt="User"
-                    className="rounded-full mx-auto sm:mx-0"
+                    className="mx-auto h-[60px] w-[60px] rounded-full sm:mx-0"
                     width={60}
                     height={60}
                   />
-                  <div>
-                    <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                  <div className="flex-1">
+                    <div className="mb-1 flex items-center justify-center gap-2 sm:justify-start">
                       <h3 className="font-semibold">Michael Chen</h3>
                       <div className="flex">
                         {Array.from({ length: 5 }).map((_, i) => (
@@ -546,12 +548,12 @@ export default function Home() {
                         ))}
                       </div>
                     </div>
-                    <p className="text-sm text-gray-500 text-center sm:text-left">Data Scientist</p>
+                    <p className="text-center text-sm text-gray-500 sm:text-left">Data Scientist</p>
                     <p className="mt-4 text-gray-600">
                       "The personalized roadmap broke down complex topics into manageable chunks. I could only study 1
                       hour per day, but the focused approach helped me master machine learning in just 3 months."
                     </p>
-                    <div className="mt-4 flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                    <div className="mt-4 flex flex-wrap items-center justify-center gap-2 sm:justify-start">
                       <span className="rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-800">
                         Machine Learning
                       </span>
@@ -563,16 +565,16 @@ export default function Home() {
                 </div>
               </div>
               <div className="rounded-lg border bg-white p-6 shadow-sm">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                   <Image
                     src="/placeholder.svg?height=60&width=60"
                     alt="User"
-                    className="rounded-full mx-auto sm:mx-0"
+                    className="mx-auto h-[60px] w-[60px] rounded-full sm:mx-0"
                     width={60}
                     height={60}
                   />
-                  <div>
-                    <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                  <div className="flex-1">
+                    <div className="mb-1 flex items-center justify-center gap-2 sm:justify-start">
                       <h3 className="font-semibold">Emily Rodriguez</h3>
                       <div className="flex">
                         {Array.from({ length: 5 }).map((_, i) => (
@@ -591,12 +593,12 @@ export default function Home() {
                         ))}
                       </div>
                     </div>
-                    <p className="text-sm text-gray-500 text-center sm:text-left">UX Designer</p>
+                    <p className="text-center text-sm text-gray-500 sm:text-left">UX Designer</p>
                     <p className="mt-4 text-gray-600">
                       "As a busy mom, I could only dedicate weekends to learning. The weekly plan option was perfect for
                       me, and I was able to transition to a UX design career while balancing family life."
                     </p>
-                    <div className="mt-4 flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                    <div className="mt-4 flex flex-wrap items-center justify-center gap-2 sm:justify-start">
                       <span className="rounded-full bg-blue-100 px-2 py-1 text-xs font-medium text-blue-800">
                         UX Design
                       </span>
@@ -609,7 +611,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-16 rounded-lg bg-white p-8 shadow-sm">
+            <div className="mx-auto mt-16 max-w-6xl rounded-lg bg-white p-8 shadow-sm">
               <div className="grid gap-8 md:grid-cols-2">
                 <div className="flex flex-col justify-center">
                   <div className="inline-flex items-center rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-sm text-teal-600">
@@ -622,7 +624,7 @@ export default function Home() {
                     personalized learning paths.
                   </p>
 
-                  <div className="mt-8 grid grid-cols-2 gap-4">
+                  <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div className="rounded-lg border border-gray-100 bg-gray-50 p-4">
                       <div className="text-3xl font-bold text-teal-500">94%</div>
                       <p className="mt-1 text-sm text-gray-500">Completion rate for learners who follow our roadmaps</p>
@@ -644,7 +646,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center mt-8 md:mt-0">
                   <div className="relative h-[350px] w-full max-w-[400px] overflow-hidden rounded-lg border border-gray-200 bg-gradient-to-br from-teal-50 to-purple-50 p-6">
                     <div className="absolute inset-0 bg-grid-gray-200/50 bg-[size:16px_16px] opacity-25"></div>
                     <div className="relative space-y-6">
@@ -683,8 +685,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-gradient-to-b from-white to-gray-50 py-20">
-          <div className="container px-4 md:px-6">
+        <section className="bg-gradient-to-b from-white to-gray-50 py-16 md:py-20">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <div className="inline-flex items-center rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-sm text-teal-600">
                 <span className="mr-2 h-2 w-2 rounded-full bg-teal-500"></span>
@@ -721,7 +723,7 @@ export default function Home() {
         </section>
       </main>
       <footer className="border-t bg-white py-12">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div>
               <div className="flex items-center gap-2">
