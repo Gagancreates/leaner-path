@@ -36,11 +36,11 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-gradient-to-b from-indigo-50 via-indigo-50/70 to-white pb-20 pt-16 lg:pb-32 lg:pt-24">
       {/* Grid pattern with gradient mask */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/dark-grid.svg')] bg-center"></div>
+        <div className="absolute inset-0 bg-[url('/dark-grid.svg')] bg-center opacity-100"></div>
         {/* Gradient mask for top-to-bottom progression and lighter around headings */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/70 to-transparent opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/30 to-transparent opacity-40"></div>
         {/* Extra radial gradient focused on heading area to make it lighter */}
-        <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[120%] h-64 bg-radial-gradient from-white via-white to-transparent opacity-70"></div>
+        <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[120%] h-64 bg-radial-gradient from-white/90 via-white/50 to-transparent opacity-40"></div>
       </div>
       
       {/* Glow effects */}
@@ -164,7 +164,7 @@ export default function Hero() {
         {/* Dashboard Preview */}
         <div className="relative mx-auto mt-16 max-w-5xl overflow-hidden rounded-xl border border-indigo-200/50 bg-white/90 p-3 shadow-xl backdrop-blur-sm">
           {/* Dashboard with a consistent grid pattern */}
-          <div className="absolute inset-0 bg-[url('/dark-grid.svg')] bg-center opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('/dark-grid.svg')] bg-center opacity-90"></div>
           <div className="absolute inset-0 bg-gradient-to-tr from-indigo-50/30 to-purple-50/30"></div>
           
           {/* Glass effect container */}
