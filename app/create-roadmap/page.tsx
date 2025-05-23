@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { ArrowLeft, ArrowRight, BookOpen, Calendar } from "lucide-react"
+import { ArrowLeft, ArrowRight, BookOpen, Calendar, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -55,8 +55,8 @@ export default function CreateRoadmap() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col">
-      <header className="border-b bg-white sticky top-0 z-50">
+    <div className="flex min-h-screen flex-col bg-slate-50">
+      <header className="border-b bg-white sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-2">
@@ -70,61 +70,73 @@ export default function CreateRoadmap() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="h-6 w-6 text-teal-500"
+                className="h-6 w-6 text-indigo-600"
               >
                 <path d="M8 3v3a2 2 0 0 1-2 2H3" />
                 <path d="M21 8V5a2 2 0 0 0-2-2H8" />
                 <path d="M3 16v3a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-3" />
                 <path d="M16 3v12a2 2 0 0 1-2 2H3" />
               </svg>
-              <span className="text-xl font-semibold text-gray-900">LearnPath</span>
+              <span className="text-xl font-semibold text-slate-800">LearnPath</span>
             </Link>
           </div>
         </div>
       </header>
-      <main className="flex-1 bg-gradient-to-b from-white to-gray-50">
+      <main className="flex-1 bg-gradient-to-b from-white to-slate-50">
         <div className="container mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8 md:py-20">
           <div className="mb-8">
-            <Link href="/" className="inline-flex items-center text-sm font-medium text-teal-600 hover:text-teal-700">
+            <Link href="/" className="inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-700 transition-colors">
               <ArrowLeft className="mr-1 h-4 w-4" />
               Back to home
             </Link>
           </div>
-          <div className="rounded-lg border bg-white p-6 shadow-sm md:p-8">
+          <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-md md:p-8">
             <div className="mb-8 space-y-2">
-              <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">Create your learning roadmap</h1>
-              <p className="text-gray-500">
+              <h1 className="text-2xl font-bold text-slate-800 md:text-3xl">Create your learning roadmap</h1>
+              <p className="text-slate-600">
                 Tell us about your learning goals and schedule, and we'll create a personalized roadmap for you.
               </p>
             </div>
 
-            <div className="mb-8">
+            <div className="mb-10">
               <div className="relative">
-                <div className="absolute left-0 top-1/2 h-0.5 w-full -translate-y-1/2 bg-gray-200"></div>
+                <div className="absolute left-0 top-1/2 h-1 w-full -translate-y-1/2 bg-slate-200 rounded-full"></div>
                 <ol className="relative flex justify-between">
                   <li className="flex items-center justify-center">
                     <div
-                      className={`relative flex h-8 w-8 items-center justify-center rounded-full border-2 ${step >= 1 ? "border-teal-500 bg-teal-500 text-white" : "border-gray-300 bg-white text-gray-500"} text-sm font-medium`}
+                      className={`relative flex h-10 w-10 items-center justify-center rounded-full border-2 ${
+                        step >= 1
+                          ? "border-indigo-600 bg-indigo-600 text-white"
+                          : "border-slate-300 bg-white text-slate-500"
+                      } text-sm font-medium shadow-sm transition-all duration-200`}
                     >
                       1
                     </div>
-                    <span className="absolute mt-10 text-xs font-medium text-gray-600">Learning Goal</span>
+                    <span className="absolute mt-12 text-sm font-medium text-slate-700">Learning Goal</span>
                   </li>
                   <li className="flex items-center justify-center">
                     <div
-                      className={`relative flex h-8 w-8 items-center justify-center rounded-full border-2 ${step >= 2 ? "border-teal-500 bg-teal-500 text-white" : "border-gray-300 bg-white text-gray-500"} text-sm font-medium`}
+                      className={`relative flex h-10 w-10 items-center justify-center rounded-full border-2 ${
+                        step >= 2
+                          ? "border-indigo-600 bg-indigo-600 text-white"
+                          : "border-slate-300 bg-white text-slate-500"
+                      } text-sm font-medium shadow-sm transition-all duration-200`}
                     >
                       2
                     </div>
-                    <span className="absolute mt-10 text-xs font-medium text-gray-600">Schedule</span>
+                    <span className="absolute mt-12 text-sm font-medium text-slate-700">Schedule</span>
                   </li>
                   <li className="flex items-center justify-center">
                     <div
-                      className={`relative flex h-8 w-8 items-center justify-center rounded-full border-2 ${step >= 3 ? "border-teal-500 bg-teal-500 text-white" : "border-gray-300 bg-white text-gray-500"} text-sm font-medium`}
+                      className={`relative flex h-10 w-10 items-center justify-center rounded-full border-2 ${
+                        step >= 3
+                          ? "border-indigo-600 bg-indigo-600 text-white"
+                          : "border-slate-300 bg-white text-slate-500"
+                      } text-sm font-medium shadow-sm transition-all duration-200`}
                     >
                       3
                     </div>
-                    <span className="absolute mt-10 text-xs font-medium text-gray-600">Review</span>
+                    <span className="absolute mt-12 text-sm font-medium text-slate-700">Review</span>
                   </li>
                 </ol>
               </div>
@@ -132,34 +144,34 @@ export default function CreateRoadmap() {
 
             <form onSubmit={handleSubmit} className="space-y-8">
               {step === 1 && (
-                <div className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="topic" className="text-base">
+                <div className="space-y-8">
+                  <div className="space-y-3">
+                    <Label htmlFor="topic" className="text-base font-medium text-slate-800">
                       What do you want to learn?
                     </Label>
-                    <div className="flex items-center rounded-md border border-gray-200 bg-white px-3 py-2 focus-within:ring-2 focus-within:ring-teal-500 focus-within:ring-offset-2">
-                      <BookOpen className="mr-2 h-5 w-5 text-gray-400" />
+                    <div className="flex items-center rounded-lg border border-slate-200 bg-white px-3 py-2.5 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200 transition-all">
+                      <BookOpen className="mr-3 h-5 w-5 text-indigo-500" />
                       <Input
                         id="topic"
                         placeholder="e.g., Web Development, Machine Learning, UX Design"
-                        className="flex-1 border-0 bg-transparent p-0 shadow-none focus-visible:ring-0"
+                        className="flex-1 border-0 bg-transparent p-0 shadow-none focus-visible:ring-0 text-slate-700 placeholder:text-slate-400"
                         value={topic}
                         onChange={(e) => setTopic(e.target.value)}
                         required
                       />
                     </div>
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="timeframe" className="text-base">
+                  <div className="space-y-3">
+                    <Label htmlFor="timeframe" className="text-base font-medium text-slate-800">
                       How much time do you have to complete your learning journey?
                     </Label>
-                    <div className="flex items-center rounded-md border border-gray-200 bg-white px-3 py-2 focus-within:ring-2 focus-within:ring-teal-500 focus-within:ring-offset-2">
-                      <Calendar className="mr-2 h-5 w-5 text-gray-400" />
+                    <div className="flex items-center rounded-lg border border-slate-200 bg-white px-3 py-2.5 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200 transition-all">
+                      <Calendar className="mr-3 h-5 w-5 text-indigo-500" />
                       <Select value={timeframe} onValueChange={setTimeframe} required>
-                        <SelectTrigger className="flex-1 border-0 bg-transparent p-0 shadow-none focus:ring-0">
+                        <SelectTrigger className="flex-1 border-0 bg-transparent p-0 shadow-none focus:ring-0 text-slate-700">
                           <SelectValue placeholder="Select a timeframe" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent className="border-slate-200 shadow-md">
                           <SelectItem value="2-weeks">2 weeks</SelectItem>
                           <SelectItem value="1-month">1 month</SelectItem>
                           <SelectItem value="3-months">3 months</SelectItem>
@@ -172,7 +184,7 @@ export default function CreateRoadmap() {
                   <div className="pt-4">
                     <Button
                       type="button"
-                      className="w-full bg-teal-500 hover:bg-teal-600"
+                      className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-6 rounded-lg transition-colors shadow-md hover:shadow-lg"
                       onClick={nextStep}
                       disabled={!topic || !timeframe}
                     >
@@ -184,9 +196,9 @@ export default function CreateRoadmap() {
               )}
 
               {step === 2 && (
-                <div className="space-y-6">
+                <div className="space-y-8">
                   <div className="space-y-4">
-                    <Label className="text-base">How would you like your roadmap to be broken down?</Label>
+                    <Label className="text-base font-medium text-slate-800">How would you like your roadmap to be broken down?</Label>
                     <RadioGroup
                       value={breakdownType}
                       onValueChange={setBreakdownType}
@@ -196,12 +208,12 @@ export default function CreateRoadmap() {
                         <RadioGroupItem value="daily" id="daily" className="peer sr-only" />
                         <Label
                           htmlFor="daily"
-                          className="flex cursor-pointer flex-col items-center justify-between rounded-md border-2 border-gray-200 bg-white p-4 hover:bg-gray-50 peer-checked:border-teal-500 peer-checked:bg-teal-50 [&:has([data-state=checked])]:border-teal-500"
+                          className="flex cursor-pointer flex-col items-center justify-between rounded-lg border-2 border-slate-200 bg-white p-5 hover:bg-slate-50 peer-checked:border-indigo-500 peer-checked:bg-indigo-50 [&:has([data-state=checked])]:border-indigo-500 transition-all shadow-sm hover:shadow-md"
                         >
-                          <Calendar className="mb-3 h-6 w-6 text-gray-500" />
+                          <Calendar className="mb-3 h-8 w-8 text-indigo-500" />
                           <div className="text-center">
-                            <div className="text-sm font-medium">Daily Plan</div>
-                            <div className="text-xs text-gray-500">Tasks broken down by day</div>
+                            <div className="text-base font-medium text-slate-800">Daily Plan</div>
+                            <div className="text-sm text-slate-600">Tasks broken down by day</div>
                           </div>
                         </Label>
                       </div>
@@ -209,23 +221,23 @@ export default function CreateRoadmap() {
                         <RadioGroupItem value="weekly" id="weekly" className="peer sr-only" />
                         <Label
                           htmlFor="weekly"
-                          className="flex cursor-pointer flex-col items-center justify-between rounded-md border-2 border-gray-200 bg-white p-4 hover:bg-gray-50 peer-checked:border-teal-500 peer-checked:bg-teal-50 [&:has([data-state=checked])]:border-teal-500"
+                          className="flex cursor-pointer flex-col items-center justify-between rounded-lg border-2 border-slate-200 bg-white p-5 hover:bg-slate-50 peer-checked:border-indigo-500 peer-checked:bg-indigo-50 [&:has([data-state=checked])]:border-indigo-500 transition-all shadow-sm hover:shadow-md"
                         >
-                          <Calendar className="mb-3 h-6 w-6 text-gray-500" />
+                          <Calendar className="mb-3 h-8 w-8 text-indigo-500" />
                           <div className="text-center">
-                            <div className="text-sm font-medium">Weekly Plan</div>
-                            <div className="text-xs text-gray-500">Tasks broken down by week</div>
+                            <div className="text-base font-medium text-slate-800">Weekly Plan</div>
+                            <div className="text-sm text-slate-600">Tasks broken down by week</div>
                           </div>
                         </Label>
                       </div>
                     </RadioGroup>
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="space-y-4 bg-slate-50 p-5 rounded-lg border border-slate-200">
                     <div>
-                      <div className="mb-2 flex items-center justify-between">
-                        <Label className="text-base">How many hours can you dedicate per day?</Label>
-                        <span className="text-sm font-medium text-teal-600">{hoursPerDay} hours</span>
+                      <div className="mb-3 flex items-center justify-between">
+                        <Label className="text-base font-medium text-slate-800">How many hours can you dedicate per day?</Label>
+                        <span className="text-sm font-semibold text-indigo-600 bg-indigo-50 py-1 px-2 rounded-md">{hoursPerDay} hours</span>
                       </div>
                       <Slider
                         defaultValue={[2]}
@@ -236,18 +248,18 @@ export default function CreateRoadmap() {
                         onValueChange={(value) => setHoursPerDay(value[0])}
                         className="py-4"
                       />
-                      <div className="flex justify-between text-xs text-gray-500">
+                      <div className="flex justify-between text-xs text-slate-600 font-medium">
                         <span>30min</span>
                         <span>8 hours</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="space-y-4 bg-slate-50 p-5 rounded-lg border border-slate-200">
                     <div>
-                      <div className="mb-2 flex items-center justify-between">
-                        <Label className="text-base">How many days per week can you learn?</Label>
-                        <span className="text-sm font-medium text-teal-600">{daysPerWeek} days</span>
+                      <div className="mb-3 flex items-center justify-between">
+                        <Label className="text-base font-medium text-slate-800">How many days per week can you learn?</Label>
+                        <span className="text-sm font-semibold text-indigo-600 bg-indigo-50 py-1 px-2 rounded-md">{daysPerWeek} days</span>
                       </div>
                       <Slider
                         defaultValue={[5]}
@@ -258,7 +270,7 @@ export default function CreateRoadmap() {
                         onValueChange={(value) => setDaysPerWeek(value[0])}
                         className="py-4"
                       />
-                      <div className="flex justify-between text-xs text-gray-500">
+                      <div className="flex justify-between text-xs text-slate-600 font-medium">
                         <span>1 day</span>
                         <span>7 days</span>
                       </div>
@@ -266,11 +278,20 @@ export default function CreateRoadmap() {
                   </div>
 
                   <div className="flex justify-between pt-4">
-                    <Button type="button" variant="outline" onClick={prevStep}>
+                    <Button 
+                      type="button" 
+                      variant="outline" 
+                      onClick={prevStep}
+                      className="border-slate-300 text-slate-700 hover:bg-slate-100 shadow-sm"
+                    >
                       <ArrowLeft className="mr-2 h-4 w-4" />
                       Back
                     </Button>
-                    <Button type="button" className="bg-teal-500 hover:bg-teal-600" onClick={nextStep}>
+                    <Button 
+                      type="button" 
+                      className="bg-indigo-600 hover:bg-indigo-700 text-white shadow-md hover:shadow-lg transition-all" 
+                      onClick={nextStep}
+                    >
                       Continue
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -279,60 +300,48 @@ export default function CreateRoadmap() {
               )}
 
               {step === 3 && (
-                <div className="space-y-6">
-                  <div className="rounded-lg border bg-gray-50 p-4">
-                    <h3 className="mb-4 text-lg font-medium">Review Your Learning Plan</h3>
+                <div className="space-y-8">
+                  <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+                    <h3 className="mb-5 text-lg font-semibold text-slate-800">Review Your Learning Plan</h3>
 
-                    <div className="space-y-3">
-                      <div className="flex justify-between">
-                        <span className="text-sm text-gray-500">Learning Topic:</span>
-                        <span className="text-sm font-medium">{topic}</span>
+                    <div className="space-y-4">
+                      <div className="flex justify-between py-1">
+                        <span className="text-sm text-slate-600">Learning Topic:</span>
+                        <span className="text-sm font-medium text-slate-900">{topic}</span>
                       </div>
-                      <Separator />
+                      <Separator className="bg-slate-200" />
 
-                      <div className="flex justify-between">
-                        <span className="text-sm text-gray-500">Timeframe:</span>
-                        <span className="text-sm font-medium">{timeframe.replace("-", " ")}</span>
+                      <div className="flex justify-between py-1">
+                        <span className="text-sm text-slate-600">Timeframe:</span>
+                        <span className="text-sm font-medium text-slate-900">{timeframe.replace("-", " ")}</span>
                       </div>
-                      <Separator />
+                      <Separator className="bg-slate-200" />
 
-                      <div className="flex justify-between">
-                        <span className="text-sm text-gray-500">Plan Breakdown:</span>
-                        <span className="text-sm font-medium capitalize">{breakdownType}</span>
+                      <div className="flex justify-between py-1">
+                        <span className="text-sm text-slate-600">Plan Breakdown:</span>
+                        <span className="text-sm font-medium text-slate-900 capitalize">{breakdownType}</span>
                       </div>
-                      <Separator />
+                      <Separator className="bg-slate-200" />
 
-                      <div className="flex justify-between">
-                        <span className="text-sm text-gray-500">Hours per day:</span>
-                        <span className="text-sm font-medium">{hoursPerDay} hours</span>
+                      <div className="flex justify-between py-1">
+                        <span className="text-sm text-slate-600">Hours per day:</span>
+                        <span className="text-sm font-medium text-slate-900">{hoursPerDay} hours</span>
                       </div>
-                      <Separator />
+                      <Separator className="bg-slate-200" />
 
-                      <div className="flex justify-between">
-                        <span className="text-sm text-gray-500">Days per week:</span>
-                        <span className="text-sm font-medium">{daysPerWeek} days</span>
+                      <div className="flex justify-between py-1">
+                        <span className="text-sm text-slate-600">Days per week:</span>
+                        <span className="text-sm font-medium text-slate-900">{daysPerWeek} days</span>
                       </div>
                     </div>
 
-                    <div className="mt-6 rounded-md bg-teal-50 p-4">
+                    <div className="mt-6 rounded-lg bg-indigo-50 p-4 border border-indigo-100">
                       <div className="flex">
                         <div className="flex-shrink-0">
-                          <svg
-                            className="h-5 w-5 text-teal-400"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <CheckCircle className="h-5 w-5 text-indigo-600" />
                         </div>
                         <div className="ml-3">
-                          <p className="text-sm font-medium text-teal-800">
+                          <p className="text-sm font-medium text-indigo-800">
                             Total learning time:{" "}
                             <span className="font-bold">{hoursPerDay * daysPerWeek} hours per week</span>
                           </p>
@@ -342,15 +351,24 @@ export default function CreateRoadmap() {
                   </div>
 
                   <div className="flex justify-between pt-4">
-                    <Button type="button" variant="outline" onClick={prevStep}>
+                    <Button 
+                      type="button" 
+                      variant="outline" 
+                      onClick={prevStep}
+                      className="border-slate-300 text-slate-700 hover:bg-slate-100 shadow-sm"
+                    >
                       <ArrowLeft className="mr-2 h-4 w-4" />
                       Back
                     </Button>
-                    <Button type="submit" className="bg-teal-500 hover:bg-teal-600" disabled={isLoading}>
+                    <Button 
+                      type="submit" 
+                      className="bg-indigo-600 hover:bg-indigo-700 text-white shadow-md hover:shadow-lg transition-all px-5 py-6" 
+                      disabled={isLoading}
+                    >
                       {isLoading ? (
                         <div className="flex items-center">
                           <svg
-                            className="mr-2 h-4 w-4 animate-spin"
+                            className="mr-3 h-5 w-5 animate-spin"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -372,7 +390,7 @@ export default function CreateRoadmap() {
                           Creating your roadmap...
                         </div>
                       ) : (
-                        <div className="flex items-center">
+                        <div className="flex items-center font-medium">
                           Generate roadmap
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </div>
@@ -386,11 +404,11 @@ export default function CreateRoadmap() {
 
           {step === 1 && (
             <div className="mt-12 space-y-4 text-center">
-              <h2 className="text-lg font-semibold text-gray-900">Popular learning paths</h2>
+              <h2 className="text-lg font-semibold text-slate-800">Popular learning paths</h2>
               <div className="flex flex-wrap justify-center gap-2">
                 <Button
                   variant="outline"
-                  className="rounded-full"
+                  className="rounded-full border-slate-200 text-slate-700 hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-600 transition-all shadow-sm"
                   onClick={() => {
                     setTopic("Web Development")
                     setTimeframe("3-months")
@@ -400,7 +418,7 @@ export default function CreateRoadmap() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="rounded-full"
+                  className="rounded-full border-slate-200 text-slate-700 hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-600 transition-all shadow-sm"
                   onClick={() => {
                     setTopic("Machine Learning")
                     setTimeframe("6-months")
@@ -410,7 +428,7 @@ export default function CreateRoadmap() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="rounded-full"
+                  className="rounded-full border-slate-200 text-slate-700 hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-600 transition-all shadow-sm"
                   onClick={() => {
                     setTopic("UX Design")
                     setTimeframe("3-months")
@@ -420,7 +438,7 @@ export default function CreateRoadmap() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="rounded-full"
+                  className="rounded-full border-slate-200 text-slate-700 hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-600 transition-all shadow-sm"
                   onClick={() => {
                     setTopic("Data Science")
                     setTimeframe("6-months")
@@ -433,8 +451,8 @@ export default function CreateRoadmap() {
           )}
         </div>
       </main>
-      <footer className="border-t bg-white py-6">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">© 2023 LearnPath. All rights reserved.</div>
+      <footer className="border-t bg-white py-6 shadow-inner">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-600">© 2023 LearnPath. All rights reserved.</div>
       </footer>
     </div>
   )
