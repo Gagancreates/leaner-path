@@ -4,8 +4,34 @@ import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { useEffect, useState, useRef } from "react"
 
 export default function Hero() {
+  // State for rotating skills text
+  const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
+  const skills = ["Math", "Physics", "Biology", "Coding", "Chemistry", "French", "History"];
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Set up the text rotation effect
+  useEffect(() => {
+    // Clear any existing interval when the component mounts
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    
+    // Create a new interval
+    intervalRef.current = setInterval(() => {
+      setCurrentSkillIndex(prevIndex => (prevIndex + 1) % skills.length);
+    }, 2000); // Change every 2 seconds
+    
+    // Clean up the interval when the component unmounts
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-indigo-50 via-indigo-50/70 to-white pb-20 pt-16 lg:pb-32 lg:pt-24">
       {/* Grid pattern with gradient mask */}
@@ -42,23 +68,29 @@ export default function Hero() {
           
           {/* Main heading */}
           <h1 className="text-center font-extrabold tracking-tight text-slate-800 sm:text-5xl md:text-6xl lg:text-7xl" style={{ lineHeight: "1.05", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>
-            <span className="block relative z-10">
-              <span className="relative inline-block">
-                Master
+            <div className="flex flex-wrap justify-center items-center">
+              {/* First part */}
+              <div className="relative mx-2">
+                <span>Learn</span>
                 <span className="absolute -bottom-1 left-0 right-0 h-3 bg-indigo-200/60 -skew-y-1 -z-10 transform"></span>
-              </span>{" "}
-              <span className="relative inline-block">
-                any
+              </div>
+              
+              {/* Second part */}
+              <div className="relative mx-2">
+                <span>Anything-</span>
                 <span className="absolute -bottom-1 left-0 right-0 h-3 bg-indigo-200/60 -skew-y-1 -z-10 transform"></span>
-              </span>{" "}
-              <span className="relative inline-block">
-                skill
+              </div>
+              
+              {/* Rotating subject */}
+              <div className="relative mx-2 w-[150px] h-[1.1em] inline-flex justify-center">
+                <div className="animatedText">{skills[currentSkillIndex]}</div>
                 <span className="absolute -bottom-1 left-0 right-0 h-3 bg-indigo-200/60 -skew-y-1 -z-10 transform"></span>
-              </span>
-            </span>
-            <div className="mt-3 block">
+              </div>
+            </div>
+            
+            <div className="mt-5 block">
               <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-md shadow-lg transform hover:scale-[1.03] transition-transform text-4xl sm:text-5xl font-black">
-                AI-powered guidance
+                Your Personal AI Tutor
               </div>
             </div>
           </h1>
@@ -273,6 +305,20 @@ const nextMilestone = {
       <style jsx>{`
         .bg-radial-gradient {
           background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0) 70%);
+        }
+        
+        @keyframes fadeInOut {
+          0%, 20% { opacity: 0; transform: translateY(10px); }
+          30%, 70% { opacity: 1; transform: translateY(0); }
+          80%, 100% { opacity: 0; transform: translateY(-10px); }
+        }
+        
+        .animatedText {
+          animation: fadeInOut 2s infinite;
+          position: absolute;
+          left: 0;
+          right: 0;
+          text-align: center;
         }
       `}</style>
     </section>
