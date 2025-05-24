@@ -67,10 +67,10 @@ export default function Hero() {
           </div>
           
           {/* Main heading */}
-          <h1 className="text-center font-extrabold tracking-tight text-slate-800 sm:text-5xl md:text-6xl lg:text-7xl" style={{ lineHeight: "1.05", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>
-            <div className="flex flex-wrap justify-center items-center">
+          <h1 className="text-center font-extrabold tracking-tight text-slate-800 sm:text-5xl md:text-6xl lg:text-8xl" style={{ lineHeight: "1.05", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>
+            <div className="flex flex-wrap justify-center items-center relative -left-12">
               {/* First part */}
-              <div className="relative mx-2">
+              <div className="relative mx-2 ">
                 <span>Learn</span>
                 <span className="absolute -bottom-1 left-0 right-0 h-3 bg-indigo-200/60 -skew-y-1 -z-10 transform"></span>
               </div>
