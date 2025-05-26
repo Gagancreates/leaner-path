@@ -19,7 +19,7 @@ export default function Header() {
   }, [])
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 px-4 mx-auto max-w-6xl pt-4">
+    <div className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-4 mx-auto max-w-6xl pt-3 sm:pt-4">
       <header 
         className={`rounded-full transition-all duration-300 ${
           isScrolled 
@@ -27,8 +27,8 @@ export default function Header() {
             : "bg-white shadow-[0_2px_15px_rgba(0,0,0,0.07)] border border-gray-100"
         }`}
       >
-        <div className="px-6">
-          <div className="flex h-16 items-center justify-between">
+        <div className="px-4 sm:px-6">
+          <div className="flex h-12 sm:h-16 items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -38,14 +38,14 @@ export default function Header() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="h-6 w-6 text-gray-900"
+                className="h-5 w-5 sm:h-6 sm:w-6 text-gray-900"
               >
                 <path d="M8 3v3a2 2 0 0 1-2 2H3" />
                 <path d="M21 8V5a2 2 0 0 0-2-2H8" />
                 <path d="M3 16v3a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-3" />
                 <path d="M16 3v12a2 2 0 0 1-2 2H3" />
               </svg>
-              <span className="text-base font-medium text-gray-900" style={{ fontFamily: "var(--font-inter)" }}>
+              <span className="text-sm sm:text-base font-medium text-gray-900" style={{ fontFamily: "var(--font-inter)" }}>
                 LearnPath
               </span>
             </Link>
@@ -98,8 +98,8 @@ export default function Header() {
               {isMobileMenuOpen ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
+                  width="20"
+                  height="20"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -113,8 +113,8 @@ export default function Header() {
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
+                  width="20"
+                  height="20"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -134,40 +134,40 @@ export default function Header() {
       
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="mt-2 rounded-xl overflow-hidden shadow-lg md:hidden">
-          <div className="p-4 space-y-2 bg-white">
+        <div className="mt-1 sm:mt-2 rounded-xl overflow-hidden shadow-lg md:hidden">
+          <div className="p-3 sm:p-4 space-y-1 sm:space-y-2 bg-white">
             <Link 
               href="#how-it-works" 
-              className="block px-3 py-2 text-[15px] text-gray-700 rounded-lg hover:bg-gray-50"
+              className="block px-3 py-2 text-sm sm:text-[15px] text-gray-700 rounded-lg hover:bg-gray-50"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               How it works
             </Link>
             <Link 
               href="#testimonials" 
-              className="block px-3 py-2 text-[15px] text-gray-700 rounded-lg hover:bg-gray-50"
+              className="block px-3 py-2 text-sm sm:text-[15px] text-gray-700 rounded-lg hover:bg-gray-50"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Success Stories
             </Link>
             <Link 
               href="/pro" 
-              className="block px-3 py-2 text-[15px] text-gray-700 rounded-lg hover:bg-gray-50"
+              className="block px-3 py-2 text-sm sm:text-[15px] text-gray-700 rounded-lg hover:bg-gray-50"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Pro
             </Link>
-            <div className="flex flex-col space-y-2 mt-3 pt-3 border-t border-gray-100">
+            <div className="flex flex-col space-y-1 sm:space-y-2 mt-2 sm:mt-3 pt-2 sm:pt-3 border-t border-gray-100">
               <Link 
                 href="/signin"
-                className="block px-3 py-2 text-[15px] text-gray-700 rounded-lg hover:bg-gray-50"
+                className="block px-3 py-2 text-sm sm:text-[15px] text-gray-700 rounded-lg hover:bg-gray-50"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Sign in
               </Link>
               <Link 
                 href="/get-started"
-                className="block px-3 py-2 text-[15px] font-medium text-white bg-black rounded-lg hover:bg-gray-800"
+                className="block px-3 py-2 text-sm sm:text-[15px] font-medium text-white bg-black rounded-lg hover:bg-gray-800"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Get Started

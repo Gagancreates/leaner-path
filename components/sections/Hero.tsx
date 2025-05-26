@@ -102,20 +102,19 @@ export default function Hero() {
           </p>
           
           {/* CTA Button - improved mobile styling */}
-          <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col items-center justify-center px-4">
-            <Button 
-              asChild
-              className="group relative inline-flex h-12 w-full max-w-xs items-center justify-center overflow-hidden rounded-lg bg-gradient-to-r from-indigo-600 to-indigo-700 px-6 sm:px-8 py-3 text-white transition-all duration-300 ease-out hover:from-indigo-700 hover:to-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 sm:w-auto"
-            >
-              <Link href="/create-roadmap">
-                <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40"></span>
-                <span className="relative flex items-center font-medium">
-                  Create your roadmap
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </span>
-              </Link>
-            </Button>
-          </div>
+          <div className="mt-4 sm:mt-6 md:mt-8 lg:mt-10 flex flex-col items-center justify-center px-4">
+          <Button 
+          asChild
+          className="group relative inline-flex h-10 sm:h-12 w-full max-w-xs items-center justify-center overflow-hidden rounded-lg bg-gradient-to-r from-indigo-600 to-indigo-700 px-4 sm:px-6 md:px-8 py-2 sm:py-3 text-white transition-all duration-300 ease-out hover:from-indigo-700 hover:to-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 sm:w-auto">
+          <Link href="/create-roadmap">
+            <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40"></span>
+                <span className="relative flex items-center font-medium text-sm sm:text-sm md:text-base lg:text-base">
+                Create your roadmap
+                <ArrowRight className="ml-1.5 sm:ml-2 h-4 w-4 sm:h-6 sm:w-4" />
+            </span>
+           </Link>
+         </Button>
+        </div>
           
           {/* Trust indicators - fixed mobile layout */}
           <div className="mt-10 md:mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-10">
