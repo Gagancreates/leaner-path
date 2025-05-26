@@ -15,20 +15,20 @@ const FAQItem = ({ question, answer, isOpen, toggleOpen, index }: FAQItemProps) 
   return (
     <div className={`border-b border-indigo-100/80 last:border-none transition-all duration-200 ${isOpen ? "bg-indigo-50/30" : ""}`}>
       <button
-        className="flex w-full items-center justify-between py-6 px-6 text-left focus:outline-none group"
+        className="flex w-full items-center justify-between py-4 sm:py-6 px-4 sm:px-6 text-left focus:outline-none group"
         onClick={toggleOpen}
       >
         <div className="flex items-center">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-medium mr-4 transition-colors group-hover:bg-indigo-200">
+          <span className="flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-medium mr-3 sm:mr-4 transition-colors group-hover:bg-indigo-200 text-xs sm:text-base">
             {index + 1}
           </span>
-          <span className="font-medium text-slate-800 text-lg group-hover:text-indigo-600 transition-colors">{question}</span>
+          <span className="font-medium text-slate-800 text-base sm:text-lg group-hover:text-indigo-600 transition-colors pr-2">{question}</span>
         </div>
-        <span className="ml-6 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white border border-indigo-100 shadow-sm transition-all duration-200 group-hover:bg-indigo-500 group-hover:border-indigo-500">
+        <span className="ml-4 sm:ml-6 flex h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0 items-center justify-center rounded-full bg-white border border-indigo-100 shadow-sm transition-all duration-200 group-hover:bg-indigo-500 group-hover:border-indigo-500">
           {isOpen ? (
-            <Minus className="h-4 w-4 text-indigo-600 group-hover:text-white" />
+            <Minus className="h-3 w-3 sm:h-4 sm:w-4 text-indigo-600 group-hover:text-white" />
           ) : (
-            <Plus className="h-4 w-4 text-indigo-600 group-hover:text-white" />
+            <Plus className="h-3 w-3 sm:h-4 sm:w-4 text-indigo-600 group-hover:text-white" />
           )}
         </span>
       </button>
@@ -37,8 +37,8 @@ const FAQItem = ({ question, answer, isOpen, toggleOpen, index }: FAQItemProps) 
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="px-6 pb-6 pl-[4.5rem]">
-          <p className="text-slate-600 leading-relaxed">{answer}</p>
+        <div className="px-4 sm:px-6 pb-4 sm:pb-6 pl-[3rem] sm:pl-[4.5rem]">
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">{answer}</p>
         </div>
       </div>
     </div>
@@ -76,7 +76,7 @@ export default function FAQ() {
   ]
 
   return (
-    <section className="relative py-24 sm:py-32 overflow-hidden">
+    <section className="relative py-16 sm:py-24 md:py-32 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/50 to-indigo-50/40"></div>
       
@@ -92,22 +92,22 @@ export default function FAQ() {
       <div className="absolute bottom-1/4 left-1/4 h-96 w-96 rounded-full bg-purple-200/20 blur-3xl"></div>
       
       <div className="container relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 sm:mb-20 text-center">
-          <div className="inline-flex items-center rounded-full border border-indigo-200 bg-white px-4 py-1.5 shadow-sm mb-5">
-            <span className="flex h-2 w-2 rounded-full bg-indigo-500 mr-2"></span>
-            <span className="text-sm font-medium text-indigo-700">Frequently Asked Questions</span>
+        <div className="mb-10 sm:mb-16 md:mb-20 text-center">
+          <div className="inline-flex items-center rounded-full border border-indigo-200 bg-white px-3 py-1 sm:px-4 sm:py-1.5 shadow-sm mb-4 sm:mb-5">
+            <span className="flex h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-indigo-500 mr-1.5 sm:mr-2"></span>
+            <span className="text-xs sm:text-sm font-medium text-indigo-700">Frequently Asked Questions</span>
           </div>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-slate-800 sm:text-4xl md:text-5xl" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>
+          <h2 className="mt-3 sm:mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-800" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>
             Everything you need to know about <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">LearnPath</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-slate-600">
+          <p className="mx-auto mt-4 sm:mt-6 max-w-2xl text-center text-sm sm:text-base md:text-lg text-slate-600">
             Find answers to common questions about our personalized learning roadmap platform
           </p>
         </div>
 
         <div className="relative mx-auto">
           {/* Card with glass effect */}
-          <div className="rounded-2xl border border-indigo-100/80 bg-white/80 backdrop-blur-sm shadow-lg overflow-hidden">
+          <div className="rounded-xl sm:rounded-2xl border border-indigo-100/80 bg-white/80 backdrop-blur-sm shadow-lg overflow-hidden">
             <div className="p-0.5 bg-gradient-to-r from-indigo-50 via-indigo-100 to-indigo-50"></div>
             <div className="divide-y divide-indigo-100/80">
               {faqItems.map((item, index) => (

@@ -32,7 +32,7 @@ export default function HowItWorks() {
             Your <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">learning journey</span> in three easy steps
           </h2>
           
-          <p className="mx-auto max-w-xl text-lg text-slate-600">
+          <p className="mx-auto max-w-xl text-base sm:text-lg text-slate-600">
             Create your personalized roadmap in minutes and start learning effectively
           </p>
         </div>
@@ -40,20 +40,20 @@ export default function HowItWorks() {
         <div className="relative mx-auto mt-12 max-w-6xl">
           {/* Step 1 */}
           <div className="relative">
-            <div className="w-full rounded-xl border border-indigo-100/80 bg-white/90 p-6 shadow-xl backdrop-blur-sm lg:p-8">
+            <div className="w-full rounded-xl border border-indigo-100/80 bg-white/90 p-4 sm:p-6 lg:p-8 shadow-xl backdrop-blur-sm">
               <div className="md:flex md:items-center md:gap-8">
                 <div className="mb-6 flex justify-center md:mb-0 md:w-1/3">
-                  <div className="relative h-48 w-48 overflow-hidden rounded-xl bg-gradient-to-br from-indigo-50 to-indigo-100 shadow-md">
+                  <div className="relative h-36 w-36 sm:h-48 sm:w-48 overflow-hidden rounded-xl bg-gradient-to-br from-indigo-50 to-indigo-100 shadow-md">
                     <div className="absolute inset-0 bg-[url('/dark-grid.svg')] bg-center opacity-30"></div>
                     <div className="relative flex h-full w-full items-center justify-center p-4">
-                      <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white/90 shadow-md">
+                      <div className="flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center rounded-full bg-white/90 shadow-md">
                         <svg 
                           width="48" 
                           height="48" 
                           viewBox="0 0 24 24" 
                           fill="none" 
                           xmlns="http://www.w3.org/2000/svg"
-                          className="h-12 w-12"
+                          className="h-10 w-10 sm:h-12 sm:w-12"
                         >
                           <defs>
                             <linearGradient id="gradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -74,19 +74,19 @@ export default function HowItWorks() {
                   </div>
                 </div>
                 <div className="md:w-2/3">
-                  <h3 className="mb-3 text-center text-2xl font-bold text-slate-800 md:text-left" style={{ fontFamily: "'Onest', sans-serif" }}>Tell us what you want to learn</h3>
-                  <p className="text-center text-lg text-slate-600 md:text-left">
+                  <h3 className="mb-3 text-center text-xl sm:text-2xl font-bold text-slate-800 md:text-left" style={{ fontFamily: "'Onest', sans-serif" }}>Tell us what you want to learn</h3>
+                  <p className="text-center text-base sm:text-lg text-slate-600 md:text-left">
                     Enter the specific skills or topics you're interested in mastering. Our AI analyzes your goals and creates a tailored learning path.
                   </p>
-                  <div className="mt-6 rounded-lg bg-indigo-50/70 p-4">
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-100 to-indigo-200 shadow-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-600">
+                  <div className="mt-4 sm:mt-6 rounded-lg bg-indigo-50/70 p-3 sm:p-4">
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <div className="flex h-8 w-8 sm:h-10 sm:w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-100 to-indigo-200 shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-600 w-4 h-4 sm:w-5 sm:h-5">
                           <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
                           <path d="m9 12 2 2 4-4"></path>
                         </svg>
                       </div>
-                      <p className="text-sm text-slate-700">We identify the most important skills and create a logical progression for your learning journey</p>
+                      <p className="text-xs sm:text-sm text-slate-700">We identify the most important skills and create a logical progression for your learning journey</p>
                     </div>
                   </div>
                 </div>
@@ -98,26 +98,26 @@ export default function HowItWorks() {
             
             {/* Arrow connecting to next step - Mobile */}
             <div className="md:hidden flex justify-center">
-              <div className="h-16 w-1 bg-gradient-to-b from-indigo-400 to-purple-400"></div>
+              <div className="h-10 sm:h-16 w-1 bg-gradient-to-b from-indigo-400 to-purple-400"></div>
             </div>
           </div>
 
           {/* Step 2 */}
           <div className="relative">
-            <div className="w-full rounded-xl border border-indigo-100/80 bg-white/90 p-6 shadow-xl backdrop-blur-sm lg:p-8">
+            <div className="w-full rounded-xl border border-indigo-100/80 bg-white/90 p-4 sm:p-6 lg:p-8 shadow-xl backdrop-blur-sm">
               <div className="md:flex md:items-center md:gap-8">
                 <div className="mb-6 flex justify-center md:mb-0 md:w-1/3">
-                  <div className="relative h-48 w-48 overflow-hidden rounded-xl bg-gradient-to-br from-purple-50 to-purple-100 shadow-md">
+                  <div className="relative h-36 w-36 sm:h-48 sm:w-48 overflow-hidden rounded-xl bg-gradient-to-br from-purple-50 to-purple-100 shadow-md">
                     <div className="absolute inset-0 bg-[url('/dark-grid.svg')] bg-center opacity-30"></div>
                     <div className="relative flex h-full w-full items-center justify-center p-4">
-                      <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white/90 shadow-md">
+                      <div className="flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center rounded-full bg-white/90 shadow-md">
                         <svg 
                           width="48" 
                           height="48" 
                           viewBox="0 0 24 24" 
                           fill="none" 
                           xmlns="http://www.w3.org/2000/svg"
-                          className="h-12 w-12"
+                          className="h-10 w-10 sm:h-12 sm:w-12"
                         >
                           <defs>
                             <linearGradient id="gradient-2" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -138,19 +138,19 @@ export default function HowItWorks() {
                   </div>
                 </div>
                 <div className="md:w-2/3">
-                  <h3 className="mb-3 text-center text-2xl font-bold text-slate-800 md:text-left" style={{ fontFamily: "'Onest', sans-serif" }}>Set your schedule</h3>
-                  <p className="text-center text-lg text-slate-600 md:text-left">
+                  <h3 className="mb-3 text-center text-xl sm:text-2xl font-bold text-slate-800 md:text-left" style={{ fontFamily: "'Onest', sans-serif" }}>Set your schedule</h3>
+                  <p className="text-center text-base sm:text-lg text-slate-600 md:text-left">
                     Tell us how much time you can dedicate and your preferred learning days. Your roadmap adapts to your lifestyle and availability.
                   </p>
-                  <div className="mt-6 rounded-lg bg-purple-50/70 p-4">
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-100 to-purple-200 shadow-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-600">
+                  <div className="mt-4 sm:mt-6 rounded-lg bg-purple-50/70 p-3 sm:p-4">
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <div className="flex h-8 w-8 sm:h-10 sm:w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-100 to-purple-200 shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-600 w-4 h-4 sm:w-5 sm:h-5">
                           <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
                           <path d="m9 12 2 2 4-4"></path>
                         </svg>
                       </div>
-                      <p className="text-sm text-slate-700">Our algorithm optimizes your learning path based on cognitive science and your personal schedule</p>
+                      <p className="text-xs sm:text-sm text-slate-700">Our algorithm optimizes your learning path based on cognitive science and your personal schedule</p>
                     </div>
                   </div>
                 </div>
@@ -162,26 +162,26 @@ export default function HowItWorks() {
             
             {/* Arrow connecting to next step - Mobile */}
             <div className="md:hidden flex justify-center">
-              <div className="h-16 w-1 bg-gradient-to-b from-purple-400 to-blue-400"></div>
+              <div className="h-10 sm:h-16 w-1 bg-gradient-to-b from-purple-400 to-blue-400"></div>
             </div>
           </div>
 
           {/* Step 3 */}
           <div className="relative">
-            <div className="w-full rounded-xl border border-indigo-100/80 bg-white/90 p-6 shadow-xl backdrop-blur-sm lg:p-8">
+            <div className="w-full rounded-xl border border-indigo-100/80 bg-white/90 p-4 sm:p-6 lg:p-8 shadow-xl backdrop-blur-sm">
               <div className="md:flex md:items-center md:gap-8">
                 <div className="mb-6 flex justify-center md:mb-0 md:w-1/3">
-                  <div className="relative h-48 w-48 overflow-hidden rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 shadow-md">
+                  <div className="relative h-36 w-36 sm:h-48 sm:w-48 overflow-hidden rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 shadow-md">
                     <div className="absolute inset-0 bg-[url('/dark-grid.svg')] bg-center opacity-30"></div>
                     <div className="relative flex h-full w-full items-center justify-center p-4">
-                      <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white/90 shadow-md">
+                      <div className="flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center rounded-full bg-white/90 shadow-md">
                         <svg 
                           width="48" 
                           height="48" 
                           viewBox="0 0 24 24" 
                           fill="none" 
                           xmlns="http://www.w3.org/2000/svg"
-                          className="h-12 w-12"
+                          className="h-10 w-10 sm:h-12 sm:w-12"
                         >
                           <defs>
                             <linearGradient id="gradient-3" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -189,32 +189,35 @@ export default function HowItWorks() {
                               <stop offset="100%" stopColor="#8b5cf6" />
                             </linearGradient>
                           </defs>
-                          {/* Roadmap Icon */}
-                          <path d="M3 6C3 4.34315 4.34315 3 6 3H8C9.65685 3 11 4.34315 11 6V8C11 9.65685 9.65685 11 8 11H6C4.34315 11 3 9.65685 3 8V6Z" stroke="url(#gradient-3)" strokeWidth="1.5" />
-                          <path d="M13 16C13 14.3431 14.3431 13 16 13H18C19.6569 13 21 14.3431 21 16V18C21 19.6569 19.6569 21 18 21H16C14.3431 21 13 19.6569 13 18V16Z" stroke="url(#gradient-3)" strokeWidth="1.5" />
-                          <path d="M11 7H13V13" stroke="url(#gradient-3)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                          <path d="M8 11L16 13" stroke="url(#gradient-3)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                          <circle cx="7" cy="7" r="1" fill="url(#gradient-3)" />
-                          <circle cx="17" cy="17" r="1" fill="url(#gradient-3)" />
+                          {/* Updated Roadmap/Success Icon */}
+                          <path d="M12 3L20 7.5V16.5L12 21L4 16.5V7.5L12 3Z" stroke="url(#gradient-3)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                          <path d="M12 12L20 7.5" stroke="url(#gradient-3)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                          <path d="M12 12V21" stroke="url(#gradient-3)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                          <path d="M12 12L4 7.5" stroke="url(#gradient-3)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                          <path d="M16 5.25L8 9.75" stroke="url(#gradient-3)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                          <circle cx="12" cy="3" r="1" fill="url(#gradient-3)" />
+                          <circle cx="20" cy="7.5" r="1" fill="url(#gradient-3)" />
+                          <circle cx="12" cy="12" r="1" fill="url(#gradient-3)" />
+                          <circle cx="4" cy="7.5" r="1" fill="url(#gradient-3)" />
                         </svg>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="md:w-2/3">
-                  <h3 className="mb-3 text-center text-2xl font-bold text-slate-800 md:text-left" style={{ fontFamily: "'Onest', sans-serif" }}>Get your personalized roadmap</h3>
-                  <p className="text-center text-lg text-slate-600 md:text-left">
+                  <h3 className="mb-3 text-center text-xl sm:text-2xl font-bold text-slate-800 md:text-left" style={{ fontFamily: "'Onest', sans-serif" }}>Get your personalized roadmap</h3>
+                  <p className="text-center text-base sm:text-lg text-slate-600 md:text-left">
                     Receive a detailed learning plan with daily tasks, resources, and progress tracking to keep you motivated and on track.
                   </p>
-                  <div className="mt-6 rounded-lg bg-blue-50/70 p-4">
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-100 to-blue-200 shadow-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600">
+                  <div className="mt-4 sm:mt-6 rounded-lg bg-blue-50/70 p-3 sm:p-4">
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <div className="flex h-8 w-8 sm:h-10 sm:w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-100 to-blue-200 shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600 w-4 h-4 sm:w-5 sm:h-5">
                           <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
                           <path d="m9 12 2 2 4-4"></path>
                         </svg>
                       </div>
-                      <p className="text-sm text-slate-700">Your roadmap updates as you progress, adapting to your learning speed and feedback</p>
+                      <p className="text-xs sm:text-sm text-slate-700">Your roadmap updates as you progress, adapting to your learning speed and feedback</p>
                     </div>
                   </div>
                 </div>
@@ -223,7 +226,7 @@ export default function HowItWorks() {
           </div>
         </div>
 
-        <div className="mt-16 flex justify-center">
+        <div className="mt-10 sm:mt-16 flex justify-center">
           <Button 
             asChild
             className="group relative inline-flex h-12 w-full max-w-xs items-center justify-center overflow-hidden rounded-lg bg-gradient-to-r from-indigo-600 to-indigo-700 px-6 sm:px-8 py-3 text-white transition-all duration-300 ease-out hover:from-indigo-700 hover:to-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 sm:w-auto"
