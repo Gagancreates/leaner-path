@@ -59,12 +59,7 @@ export default function Header() {
                 >
                   How it works
                 </Link>
-                <Link 
-                  href="#testimonials" 
-                  className="text-[15px] text-gray-700 hover:text-gray-900 font-medium"
-                >
-                  Success Stories
-                </Link>
+                
                 <Link 
                   href="/pro" 
                   className="text-[15px] text-gray-700 hover:text-gray-900 font-medium"
