@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export default function Features() {
   return (
@@ -10,7 +11,7 @@ export default function Features() {
             <span className="mr-2 h-2 w-2 rounded-full bg-teal-500"></span>
             The Science of Learning
           </div>
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl" style={{ fontFamily: "var(--font-inter)" }}>
+          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>
             Proven principles behind <span className="bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">effective learning</span>
           </h2>
           <p className="mt-6 text-xl text-gray-500">
@@ -45,7 +46,7 @@ export default function Features() {
                   <path d="M16 18a4 4 0 0 0-8 0"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900">Spaced Repetition</h3>
+              <h3 className="text-xl font-bold text-gray-900 " style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>Spaced Repetition</h3>
               <p className="mt-4 text-center text-gray-600">
                 Our roadmaps use scientifically-proven spaced repetition to help you remember what you learn for the long term.
               </p>
@@ -78,7 +79,7 @@ export default function Features() {
                   <path d="M10 2c1 .5 2 2 2 5"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900">Microlearning</h3>
+              <h3 className="text-xl font-bold text-gray-900" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>Microlearning</h3>
               <p className="mt-4 text-center text-gray-600">
                 Break down complex topics into bite-sized daily tasks that fit perfectly into your busy schedule.
               </p>
@@ -111,7 +112,7 @@ export default function Features() {
                   <path d="m9 12 2 2 4-4"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900">Active Recall</h3>
+              <h3 className="text-xl font-bold text-gray-900" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>Active Recall</h3>
               <p className="mt-4 text-center text-gray-600">
                 Our system encourages you to actively engage with the material, not just passively consume it.
               </p>
@@ -126,29 +127,37 @@ export default function Features() {
         </div>
 
         <div className="mx-auto mt-20 max-w-5xl">
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-teal-500 to-teal-600 shadow-xl">
-            <div className="absolute bottom-0 left-1/2 h-full w-full -translate-x-1/2 bg-[url('/pattern.svg')] bg-cover opacity-10"></div>
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-600 to-indigo-700 shadow-xl">
+            <div className="absolute inset-0 bg-[url('/dark-grid.svg')] bg-center opacity-30"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-indigo-600/90 to-indigo-700/90"></div>
             <div className="relative z-10 px-8 py-12 sm:px-12 lg:px-16">
               <div className="md:flex md:items-center md:justify-between">
                 <div className="max-w-xl">
-                  <h3 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                  <h3 className="text-2xl font-bold tracking-tight text-white sm:text-3xl" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>
                     Ready to accelerate your learning journey?
                   </h3>
-                  <p className="mt-4 text-lg text-teal-100">
+                  <p className="mt-4 text-lg text-indigo-100">
                     Create your personalized roadmap today and start making meaningful progress toward your goals.
                   </p>
                 </div>
                 <div className="mt-8 md:mt-0">
-                  <Link
-                    href="/create-roadmap"
-                    className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-medium text-teal-600 shadow-md transition-colors hover:bg-gray-50 hover:text-teal-700"
+                  <Button 
+                    asChild
+                    className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg bg-white px-6 sm:px-8 py-3 text-indigo-700 transition-all duration-300 ease-out hover:bg-gray-50 hover:text-indigo-800 font-medium"
                   >
-                    Get Started
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                    <Link href="/create-roadmap">
+                      <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-indigo-600 opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40"></span>
+                      <span className="relative flex items-center">
+                        Get Started
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </span>
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </div>
+            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-300 to-transparent"></div>
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-300 to-transparent"></div>
           </div>
         </div>
       </div>

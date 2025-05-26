@@ -97,7 +97,7 @@ export default function FAQ() {
             <span className="flex h-2 w-2 rounded-full bg-indigo-500 mr-2"></span>
             <span className="text-sm font-medium text-indigo-700">Frequently Asked Questions</span>
           </div>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-slate-800 sm:text-4xl md:text-5xl">
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-slate-800 sm:text-4xl md:text-5xl" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>
             Everything you need to know about <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">LearnPath</span>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-slate-600">

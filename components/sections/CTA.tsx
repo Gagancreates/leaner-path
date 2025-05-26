@@ -17,7 +17,7 @@ export default function CTA() {
             <span className="mr-2 h-2 w-2 rounded-full bg-teal-500"></span>
             Start Your Journey
           </div>
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>
             Ready to <span className="bg-gradient-to-r from-teal-500 to-purple-600 bg-clip-text text-transparent">transform</span> your learning?
           </h2>
           <p className="mt-6 text-xl text-gray-500">

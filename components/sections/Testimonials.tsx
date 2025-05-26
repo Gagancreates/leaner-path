@@ -9,7 +9,7 @@ export default function Testimonials() {
             <span className="mr-2 h-2 w-2 rounded-full bg-teal-500"></span>
             Success Stories
           </div>
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl" style={{ fontFamily: "var(--font-inter)" }}>
+          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>
             Transforming learning <span className="bg-gradient-to-r from-teal-500 to-purple-600 bg-clip-text text-transparent">journeys</span>
           </h2>
           <p className="mt-6 text-xl text-gray-500">
@@ -24,25 +24,25 @@ export default function Testimonials() {
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-teal-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
               
               {/* Top background design */}
-              <div className="absolute top-0 h-24 w-full bg-gradient-to-r from-teal-400 to-teal-500"></div>
+              <div className="absolute top-0 h-36 w-full bg-gradient-to-r from-teal-400 to-teal-500"></div>
               
-              <div className="relative p-8 pt-16">
+              <div className="relative p-8">
                 {/* Avatar */}
-                <div className="mb-6 flex justify-center">
-                  <div className="relative -mt-20 h-20 w-20 overflow-hidden rounded-full border-4 border-white shadow-md">
+                <div className="mb-12 flex justify-center">
+                  <div className="relative h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-md" style={{ marginTop: "1rem" }}>
                     <Image
-                      src="/placeholder.svg?height=80&width=80"
+                      src="/placeholder.svg?height=96&width=96"
                       alt="Sarah Johnson"
                       className="h-full w-full object-cover"
-                      width={80}
-                      height={80}
+                      width={96}
+                      height={96}
                     />
                   </div>
                 </div>
                 
                 {/* Content */}
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-gray-900">Sarah Johnson</h3>
+                  <h3 className="text-xl font-bold text-gray-900" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>Sarah Johnson</h3>
                   <p className="text-teal-600">Web Developer</p>
                   
                   {/* Rating */}
@@ -90,25 +90,25 @@ export default function Testimonials() {
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-purple-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
               
               {/* Top background design */}
-              <div className="absolute top-0 h-24 w-full bg-gradient-to-r from-purple-400 to-purple-500"></div>
+              <div className="absolute top-0 h-36 w-full bg-gradient-to-r from-purple-400 to-purple-500"></div>
               
-              <div className="relative p-8 pt-16">
+              <div className="relative p-8">
                 {/* Avatar */}
-                <div className="mb-6 flex justify-center">
-                  <div className="relative -mt-20 h-20 w-20 overflow-hidden rounded-full border-4 border-white shadow-md">
+                <div className="mb-12 flex justify-center">
+                  <div className="relative h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-md" style={{ marginTop: "1rem" }}>
                     <Image
-                      src="/placeholder.svg?height=80&width=80"
+                      src="/placeholder.svg?height=96&width=96"
                       alt="Michael Chen"
                       className="h-full w-full object-cover"
-                      width={80}
-                      height={80}
+                      width={96}
+                      height={96}
                     />
                   </div>
                 </div>
                 
                 {/* Content */}
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-gray-900">Michael Chen</h3>
+                  <h3 className="text-xl font-bold text-gray-900" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>Michael Chen</h3>
                   <p className="text-purple-600">Data Scientist</p>
                   
                   {/* Rating */}
@@ -156,25 +156,25 @@ export default function Testimonials() {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-blue-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
               
               {/* Top background design */}
-              <div className="absolute top-0 h-24 w-full bg-gradient-to-r from-blue-400 to-blue-500"></div>
+              <div className="absolute top-0 h-36 w-full bg-gradient-to-r from-blue-400 to-blue-500"></div>
               
-              <div className="relative p-8 pt-16">
+              <div className="relative p-8">
                 {/* Avatar */}
-                <div className="mb-6 flex justify-center">
-                  <div className="relative -mt-20 h-20 w-20 overflow-hidden rounded-full border-4 border-white shadow-md">
+                <div className="mb-12 flex justify-center">
+                  <div className="relative h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-md" style={{ marginTop: "1rem" }}>
                     <Image
-                      src="/placeholder.svg?height=80&width=80"
+                      src="/placeholder.svg?height=96&width=96"
                       alt="Emily Rodriguez"
                       className="h-full w-full object-cover"
-                      width={80}
-                      height={80}
+                      width={96}
+                      height={96}
                     />
                   </div>
                 </div>
                 
                 {/* Content */}
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-gray-900">Emily Rodriguez</h3>
+                  <h3 className="text-xl font-bold text-gray-900" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>Emily Rodriguez</h3>
                   <p className="text-blue-600">UX Designer</p>
                   
                   {/* Rating */}
@@ -225,7 +225,7 @@ export default function Testimonials() {
                   <span className="mr-2 h-2 w-2 rounded-full bg-teal-500"></span>
                   Success Metrics
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 sm:text-3xl">Our learners achieve their goals</h3>
+                <h3 className="text-2xl font-bold text-gray-900 sm:text-3xl" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>Our learners achieve their goals</h3>
                 <p className="mt-4 text-lg text-gray-600">
                   We've helped thousands of people master new skills and advance their careers through structured,
                   personalized learning paths.
@@ -235,28 +235,28 @@ export default function Testimonials() {
                   <div className="relative overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 shadow-lg transition-all hover:shadow-xl">
                     <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-teal-500/10"></div>
                     <div className="relative">
-                      <div className="bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-4xl font-extrabold text-transparent">94%</div>
+                      <div className="bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-4xl font-extrabold text-transparent" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>94%</div>
                       <p className="mt-2 text-sm text-gray-600">Completion rate for learners who follow our roadmaps</p>
                     </div>
                   </div>
                   <div className="relative overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 shadow-lg transition-all hover:shadow-xl">
                     <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-purple-500/10"></div>
                     <div className="relative">
-                      <div className="bg-gradient-to-r from-purple-500 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent">78%</div>
+                      <div className="bg-gradient-to-r from-purple-500 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>78%</div>
                       <p className="mt-2 text-sm text-gray-600">Users who report career advancement after completing a roadmap</p>
                     </div>
                   </div>
                   <div className="relative overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 shadow-lg transition-all hover:shadow-xl">
                     <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-blue-500/10"></div>
                     <div className="relative">
-                      <div className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-4xl font-extrabold text-transparent">3x</div>
+                      <div className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-4xl font-extrabold text-transparent" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>3x</div>
                       <p className="mt-2 text-sm text-gray-600">Faster learning compared to unstructured approaches</p>
                     </div>
                   </div>
                   <div className="relative overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 shadow-lg transition-all hover:shadow-xl">
                     <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-amber-500/10"></div>
                     <div className="relative">
-                      <div className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-4xl font-extrabold text-transparent">5k+</div>
+                      <div className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-4xl font-extrabold text-transparent" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>5k+</div>
                       <p className="mt-2 text-sm text-gray-600">Active learners using our platform daily</p>
                     </div>
                   </div>
@@ -269,7 +269,7 @@ export default function Testimonials() {
                   
                   <div className="relative space-y-8">
                     <div className="text-center">
-                      <h4 className="text-xl font-bold text-gray-900">Your potential growth</h4>
+                      <h4 className="text-xl font-bold text-gray-900" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>Your potential growth</h4>
                       <p className="mt-1 text-sm text-gray-600">Based on consistent daily learning</p>
                     </div>
 
@@ -311,7 +311,7 @@ export default function Testimonials() {
                         <polyline points="22 4 12 14.01 9 11.01" />
                       </svg>
                       <p className="text-sm text-gray-800">
-                        <span className="font-semibold">Start today</span> - consistent practice leads to exponential growth
+                        <span className="font-semibold" style={{ fontFamily: "'Onest', sans-serif" }}>Start today</span> - consistent practice leads to exponential growth
                       </p>
                     </div>
                   </div>
