@@ -1,17 +1,26 @@
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { Button } from "@/components/ui/button"
 
 export default function CTA() {
   return (
     <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-50"></div>
+      {/* Background elements - matching FAQ.tsx */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/50 to-indigo-50/40"></div>
+      
+      {/* Grid pattern */}
+      <div className="absolute inset-0 bg-[url('/dark-grid.svg')] bg-center opacity-[0.03]"></div>
       
       {/* Decorative elements */}
-      <div className="absolute top-1/4 right-0 h-96 w-96 rounded-full bg-teal-100 opacity-20 blur-3xl"></div>
-      <div className="absolute bottom-1/4 left-0 h-96 w-96 rounded-full bg-purple-100 opacity-20 blur-3xl"></div>
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-300/30 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-300/30 to-transparent"></div>
       
-      <div className="container relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* Glow effects */}
+      <div className="absolute top-1/4 right-1/4 h-96 w-96 rounded-full bg-indigo-200/20 blur-3xl"></div>
+      <div className="absolute bottom-1/4 left-1/4 h-96 w-96 rounded-full bg-purple-200/20 blur-3xl"></div>
+      
+      <div className="container relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <div className="inline-flex items-center rounded-full border border-teal-200 bg-teal-50 px-4 py-2 text-sm font-medium text-teal-600 shadow-sm mb-4">
             <span className="mr-2 h-2 w-2 rounded-full bg-teal-500"></span>
@@ -25,13 +34,18 @@ export default function CTA() {
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/create-roadmap"
-              className="inline-flex h-14 w-full items-center justify-center rounded-full bg-gradient-to-r from-teal-500 to-teal-600 px-10 text-base font-medium text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 sm:w-auto"
+            <Button 
+              asChild
+              className="group relative inline-flex h-14 w-full items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-blue-500 to-pink-400 px-10 text-base font-medium text-white shadow-lg transition-all duration-300 ease-out hover:from-blue-600 hover:to-pink-500 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 sm:w-auto"
             >
-              Create Your Roadmap
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+              <Link href="/create-roadmap">
+                <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40"></span>
+                <span className="relative flex items-center font-medium">
+                  Create Your Roadmap
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </span>
+              </Link>
+            </Button>
             <Link
               href="#how-it-works"
               className="inline-flex h-14 w-full items-center justify-center rounded-full border border-gray-200 bg-white px-10 text-base font-medium text-gray-800 shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 sm:w-auto"

@@ -13,7 +13,7 @@ interface FAQItemProps {
 
 const FAQItem = ({ question, answer, isOpen, toggleOpen, index }: FAQItemProps) => {
   return (
-    <div className={`border-b border-indigo-100/80 last:border-none transition-all duration-300 ${isOpen ? "bg-indigo-50/30" : ""}`}>
+    <div className={`border-b border-indigo-100/80 last:border-none transition-all duration-200 ${isOpen ? "bg-indigo-50/30" : ""}`}>
       <button
         className="flex w-full items-center justify-between py-6 px-6 text-left focus:outline-none group"
         onClick={toggleOpen}
@@ -33,7 +33,7 @@ const FAQItem = ({ question, answer, isOpen, toggleOpen, index }: FAQItemProps) 
         </span>
       </button>
       <div
-        className={`transition-all duration-500 ease-in-out overflow-hidden ${
+        className={`transition-all duration-200 ease-out overflow-hidden ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >

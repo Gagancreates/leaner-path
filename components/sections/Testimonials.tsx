@@ -2,8 +2,22 @@ import Image from "next/image"
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-24 bg-white">
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="relative py-24 overflow-hidden">
+      {/* Background elements - matching FAQ.tsx */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/50 to-indigo-50/40"></div>
+      
+      {/* Grid pattern */}
+      <div className="absolute inset-0 bg-[url('/dark-grid.svg')] bg-center opacity-[0.03]"></div>
+      
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-300/30 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-300/30 to-transparent"></div>
+      
+      {/* Glow effects */}
+      <div className="absolute top-1/4 right-1/4 h-96 w-96 rounded-full bg-indigo-200/20 blur-3xl"></div>
+      <div className="absolute bottom-1/4 left-1/4 h-96 w-96 rounded-full bg-purple-200/20 blur-3xl"></div>
+
+      <div className="container relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center mb-16">
           <div className="inline-flex items-center rounded-full border border-teal-200 bg-teal-50 px-4 py-2 text-sm font-medium text-teal-600 shadow-sm mb-4">
             <span className="mr-2 h-2 w-2 rounded-full bg-teal-500"></span>
@@ -27,9 +41,9 @@ export default function Testimonials() {
               <div className="absolute top-0 h-36 w-full bg-gradient-to-r from-teal-400 to-teal-500"></div>
               
               <div className="relative p-8">
-                {/* Avatar */}
-                <div className="mb-12 flex justify-center">
-                  <div className="relative h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-md" style={{ marginTop: "1rem" }}>
+                {/* Avatar - positioned higher */}
+                <div className="mb-10 flex justify-center">
+                  <div className="relative h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-md" style={{ marginTop: "-0.5rem" }}>
                     <Image
                       src="/placeholder.svg?height=96&width=96"
                       alt="Sarah Johnson"
@@ -93,9 +107,9 @@ export default function Testimonials() {
               <div className="absolute top-0 h-36 w-full bg-gradient-to-r from-purple-400 to-purple-500"></div>
               
               <div className="relative p-8">
-                {/* Avatar */}
-                <div className="mb-12 flex justify-center">
-                  <div className="relative h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-md" style={{ marginTop: "1rem" }}>
+                {/* Avatar - positioned higher */}
+                <div className="mb-10 flex justify-center">
+                  <div className="relative h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-md" style={{ marginTop: "-0.5rem" }}>
                     <Image
                       src="/placeholder.svg?height=96&width=96"
                       alt="Michael Chen"
@@ -159,9 +173,9 @@ export default function Testimonials() {
               <div className="absolute top-0 h-36 w-full bg-gradient-to-r from-blue-400 to-blue-500"></div>
               
               <div className="relative p-8">
-                {/* Avatar */}
-                <div className="mb-12 flex justify-center">
-                  <div className="relative h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-md" style={{ marginTop: "1rem" }}>
+                {/* Avatar - positioned higher */}
+                <div className="mb-10 flex justify-center">
+                  <div className="relative h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-md" style={{ marginTop: "-0.5rem" }}>
                     <Image
                       src="/placeholder.svg?height=96&width=96"
                       alt="Emily Rodriguez"
