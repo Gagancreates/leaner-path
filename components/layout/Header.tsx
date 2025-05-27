@@ -8,7 +8,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  // Handle scroll effect for header
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
@@ -45,31 +45,25 @@ export default function Header() {
                 <path d="M3 16v3a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-3" />
                 <path d="M16 3v12a2 2 0 0 1-2 2H3" />
               </svg>
-              <span className="text-sm sm:text-base font-medium text-gray-900" style={{ fontFamily: "var(--font-inter)" }}>
+              <span className="text-sm sm:text-base font-medium text-gray-900" style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>
                 LearnPath
               </span>
             </Link>
             
-            {/* Desktop navigation */}
+         
             <nav className="hidden items-center md:flex">
-              <div className="flex mr-6 space-x-7">
+              <div className="flex mr-2 space-x-7">
                 <Link 
                   href="#how-it-works" 
                   className="text-[15px] text-gray-700 hover:text-gray-900 font-medium"
                 >
-                  How it works
+                  Features
                 </Link>
                 <Link 
-                  href="#testimonials" 
+                  href="/pricing" 
                   className="text-[15px] text-gray-700 hover:text-gray-900 font-medium"
                 >
-                  Success Stories
-                </Link>
-                <Link 
-                  href="/pro" 
-                  className="text-[15px] text-gray-700 hover:text-gray-900 font-medium"
-                >
-                  Pro
+                  Pricing
                 </Link>
               </div>
               <div className="flex items-center space-x-3">
@@ -137,25 +131,18 @@ export default function Header() {
         <div className="mt-1 sm:mt-2 rounded-xl overflow-hidden shadow-lg md:hidden">
           <div className="p-3 sm:p-4 space-y-1 sm:space-y-2 bg-white">
             <Link 
-              href="#how-it-works" 
+              href="#features" 
               className="block px-3 py-2 text-sm sm:text-[15px] text-gray-700 rounded-lg hover:bg-gray-50"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              How it works
+              Features
             </Link>
             <Link 
-              href="#testimonials" 
+              href="/pricing" 
               className="block px-3 py-2 text-sm sm:text-[15px] text-gray-700 rounded-lg hover:bg-gray-50"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Success Stories
-            </Link>
-            <Link 
-              href="/pro" 
-              className="block px-3 py-2 text-sm sm:text-[15px] text-gray-700 rounded-lg hover:bg-gray-50"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Pro
+              Pricing
             </Link>
             <div className="flex flex-col space-y-1 sm:space-y-2 mt-2 sm:mt-3 pt-2 sm:pt-3 border-t border-gray-100">
               <Link 
