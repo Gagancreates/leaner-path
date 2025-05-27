@@ -96,7 +96,7 @@ export default function Hero() {
           </h1>
           
           {/* Subheading */}
-          <p className="mx-auto mt-4 sm:mt-6 max-w-2xl text-center text-base sm:text-lg text-slate-600 md:text-xl px-2">
+          <p className="mx-auto mt-4 sm:mt-6 max-w-2xl text-center text-base sm:text-lg text-slate-600 md:text-xl px-2"  style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}>
             Transform your learning goals into personalized daily plans. 
             Our AI adapts to your schedule and learning style for maximum progress.
           </p>

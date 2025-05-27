@@ -1,14 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import "../public/fonts/fonts.css";
-
-// Load Inter font
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-});
 
 export const metadata: Metadata = {
   title: "LearnPath - Personalized Learning Roadmaps",
@@ -26,7 +18,8 @@ export default function RootLayout({
         <link rel="stylesheet" href="/fonts/fonts.css" />
       </head>
       <body
-        className={`${inter.variable} antialiased font-sans`}
+        style={{ lineHeight: "1.1", letterSpacing: "-0.02em", fontFamily: "'Onest', sans-serif" }}
+        className="antialiased"
       >
         {children}
       </body>
